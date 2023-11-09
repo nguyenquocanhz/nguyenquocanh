@@ -1,0 +1,20 @@
+#loader {
+    border: 16px solid #f3f3f3; /* Độ dày của border */
+    border-top: 16px solid #3498db; /* Màu sắc của border */
+    border-radius: 50%; /* Hình dạng của border */
+    width: 120px; /* Kích thước của loader */
+    height: 120px; /* Kích thước của loader */
+    animation: spin 2s linear infinite; /* Thêm hiệu ứng quay vòng */
+    position: absolute; /* Xác định vị trí */
+    top: 50%; /* Xác định vị trí */
+    left: 50%; /* Xác định vị trí */
+    margin-top: -60px; /* Xác định vị trí */
+    margin-left: -60px; /* Xác định vị trí */
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  

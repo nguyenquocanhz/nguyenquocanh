@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0,user-scalable=yes">
+  	<meta name="description" content="Nguyễn Quốc Anh là một nhà phát triển (Dev) có kinh nghiệm trong lĩnh vực thực tại ảo (Virtual Reality - VV). Anh ta sở hữu tài năng và kiến thức chuyên môn để giải quyết các thách thức kỹ thuật phức tạp, bao gồm phát triển ứng dụng thực tại ảo, mô hình hoá đối tượng và các giải pháp thực tế tăng cường. Hãy liên hệ với Nguyễn Quốc Anh để biết thêm chi tiết về dịch vụ của anh ta.">
+    <title>Information</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="./script.js"></script>
+</head>
+
+<body class="main-bg">
+    <div id="loader"></div>
+    <main class="main-content">
+        <header class="z-content-header">
+            <div class="content-header">
+                <img src="https://i0.wp.com/thatnhucuocsong.com.vn/wp-content/uploads/2022/04/Anh-avatar-dep-anh-dai-dien-FB-Tiktok-Zalo.jpg?ssl=1"
+                    alt="" class="images">
+                <h1 class="username">
+                    Nguyễn Quốc Anh
+                </h1>
+            </div>
+        </header>
+        <footer class="z-content-footer">
+            <div class="social-icons show">
+                <a href="https://fb.com/nguyenquocanh.dev" aria-label="Facebook" target="_blank"><img src="./svg/fb.svg" alt=""></a>
+                <a href="https://zalo.me/0397426841" aria-label="Zalo" target="_blank" ><img src="./svg/zalo.png" alt=""></a>
+                <a href="https://t.me/nguyenquocanhdz1" aria-label="Telegram" target="_blank"><img src="./svg/tele.svg" alt=""></a>
+            </div>
+            <div class="donate">
+                <button id="donate-btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#vcb-modal">
+                    VCB VIETQR
+                </button>
+            </div>
+        </footer>
+    </main>
+    <!-- Modal -->
+    <div class="modal fade" id="vcb-modal" tabindex="-1" aria-labelledby="vcb-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="vcb-modal-label">VCB QR Code Payment</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Please scan the QR code below to make payment with VCB.</p>
+                    <img src="https://img.vietqr.io/image/VCB-9397426841-compact.png" width="250px" height="250px" alt="VCB QR Code">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Lấy phần modal
+            var modal = document.getElementById("vcb-modal");
+
+            // Lấy nút đóng modal
+            var closeBtn = document.getElementsByClassName("close")[0];
+
+            // Khi người dùng click vào nút đóng, đóng modal
+            closeBtn.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            // Khi người dùng click bên ngoài modal, đóng modal
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+            // Hiển thị modal khi click vào nút donate
+            var donateBtn = document.getElementById("donate-btn");
+            donateBtn.onclick = function () {
+                modal.style.display = "block";
+            }
+        });
+    </script>
+</body>
+
+</html>
